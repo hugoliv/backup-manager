@@ -1,0 +1,11 @@
+backupmanager:
+  restart: always
+  image: hugoliv/backup:latest
+  volumes_from:
+    - datavolume
+
+datavolume:
+  restart: always
+  image: tianon/true:latest
+  volumes:
+    - /data
